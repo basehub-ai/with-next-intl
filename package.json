@@ -2,15 +2,16 @@
   "name": "example-app-router",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "basehub dev & next dev --turbo",
     "lint": "eslint src && tsc && prettier src --check",
     "test": "pnpm run test:playwright && pnpm run test:jest",
     "test:playwright": "playwright test",
     "test:jest": "jest",
-    "build": "next build",
+    "build": "basehub build && next build",
     "start": "next start"
   },
   "dependencies": {
+    "basehub": "^8.2.0",
     "clsx": "^2.1.1",
     "next": "^15.3.0",
     "next-intl": "^4.0.0",
